@@ -1,15 +1,4 @@
 <template>
-    <lightning-input
-
-            type="search"
-
-            label="Search"
-
-            value={searchTerm}
-
-            onchange={handleKeyChange}>
-
-    </lightning-input>
     <lightning-card title="Book List">
         <template if:true={books.data}>
             <lightning-datatable
@@ -18,6 +7,6 @@
                     columns={columns}
             ></lightning-datatable>
         </template>
-        <lightning-button label="Export to CSV" onclick={exportToCSV} class="slds-m-bottom_medium"></lightning-button>
+        <lightning-button label="Export to CSV" onclick={exportToCSV}  style="margin-bottom: 4rem;"></lightning-button>
     </lightning-card>
 </template>

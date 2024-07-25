@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Book Search">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Search" value={searchKey} onchange={handleSearchKeyChange}></lightning-input>
+        </div>
+        <template if:true={books}>
+            <ul>
+                <template for:each={books} for:item="book">
+                    <li key={book.Id}>
+                        <p>Name: {book.Name}</p>
+                        <p>Genre: {book.Genre__c}</p>
+                        <p>Published Year: {book.Published_year__c}</p>
+                        <p>Author: {book.Author__r.Name}</p>
+                        <p>Author Email: {book.Author__r.Email__c}</p>
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+</template>

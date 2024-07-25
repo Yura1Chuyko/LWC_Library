@@ -53,8 +53,5 @@ export default class BookList extends LightningElement {
         downLink.download = "Book_Data.csv";
         downLink.click();
     }
-    handleKeyChange(event){
-        this.searchTerm = event.target.value;
-    }
 
 }
