@@ -6,4 +6,4 @@ To run this application you should:
 5.Check path environment variables, sfdx and jdk should be there.
 6.Download project from GitHub.
 7.Open a project in Visual Studio Code, connect project with developer org,then deploy metadata on developer org.
-8.Open application on developer org.
+8.Open application "Library Manager App" on developer org through App Manager.
